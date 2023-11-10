@@ -1,0 +1,80 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add</title>
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+</head>
+<body class="bg-body-tertiary">
+
+    <div class="container">
+        <main>
+            <div class="py-5 text-center">
+                <h2>Kayıt Formu</h2><p>Lütfen Bilgilerinizi Giriniz</p>
+                
+            </div>
+
+            <div class="row g-5">
+                <div class="col-md-7 col-lg-8">
+                    <h4 class="mb-3">Bilgileriniz</h4>
+                    @using (Html.BeginForm())
+                    {
+                        <p>@Html.ValidationMessage("MemberException")</p>
+                        <div class="row g-3">
+                            <div class="col-sm-6">
+                                <label for="firstName" class="form-label">Adınız</label>
+                                <input type="text" class="form-control" id="firstName" name="member.firstName" placeholder="" value="" required>
+                            </div>
+
+                            <div class="col-sm-6">
+                                <label for="lastName" class="form-label">Soyadınız</label>
+                                <input type="text" class="form-control" id="lastName" name="member.lastName" placeholder="" value="" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="email" class="form-label">Mail</label>
+                                <input type="email" class="form-control" id="email" name="member.email" placeholder="you@example.com">
+                            </div>
+
+                            <div class="col-12">
+                                <label for="address" class="form-label">Doğum Tarihiniz</label>
+                                <input type="text" class="form-control" id="dateOfBirth" name="member.dateOfBirth" placeholder="06/01/1985" required>
+                            </div>
+
+                            <div class="col-12">
+                                <label for="address2" class="form-label">Tc Numarası</label>
+                                <input type="text" class="form-control" id="tcNo" name="member.tcNo" placeholder="Apartment or suite">
+                            </div>
+                        </div>
+                        <br />
+
+                        <button class="w-100 btn btn-primary btn-lg" type="submit">Kayıt Ol</button>
+
+                    }
+                </div>
+                    
+            </div>
+        </main>
+                    
+
+        <footer class="my-5 pt-5 text-body-secondary text-center text-small">
+            <p class="mb-1">&copy; 2017–2023 Company Name</p>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Privacy</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Support</a></li>
+            </ul>
+        </footer>
+    </div>
+                    
+    <script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+
+    <script src="checkout.js"></script>
+</body>
+</html>
